@@ -1,0 +1,151 @@
+
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 75% 40%, #1c283d 0%, #0d131f 75%);
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #002be9;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    gap: 26px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #fbbd08;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.accueil {
+    width: 100%;
+    padding: 60px 8% 100px 8%;
+}
+
+.contenu {
+    max-width: 560px;
+}
+
+.sous-titre {
+    color: #fbbd08;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.4rem;
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+h1 span {
+    color: #fbbd08;
+}
+
+.description {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+.boutons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn-principal,
+.btn-secondaire {
+    padding: 13px 24px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-principal {
+    background-color: #fbbd08;
+    color: #0d131f;
+}
+
+.btn-principal:hover {
+    background-color: #eab308;
+}
+
+.btn-secondaire {
+    background-color: rgba(255, 255, 255, 0.03);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-secondaire:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}

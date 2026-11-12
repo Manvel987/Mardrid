@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap');
 
 * {
@@ -8,8 +9,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: radial-gradient(circle at 75% 40%, #2c394e 0%, #081e4e 75%);
-    color: white;
+    background: radial-gradient(circle at 100% 40%, #bdbec2 0%, #051129 75%);
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,14 +21,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 22px 8%;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 0.95rem;
-    color: white;
+    color: #D4AF37;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -37,7 +38,7 @@ body {
     content: "";
     width: 6px;
     height: 6px;
-    background: #00fa00;
+    background: #fbbd08;
     border-radius: 50%;
 }
 
@@ -50,6 +51,8 @@ nav a {
     color: #cbd5e1;
     text-decoration: none;
     font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -63,11 +66,32 @@ main {
 }
 
 .accueil {
+    position: relative;
     width: 100%;
     padding: 60px 8% 100px;
+    overflow: hidden;
+}
+
+.accueil::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 450px;
+    height: 450px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f8/Real_de_Madrid_football_1902-1908_logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.12;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .contenu {
+    position: relative;
+    z-index: 1;
     max-width: 560px;
 }
 
@@ -101,6 +125,7 @@ h1 span {
 .boutons {
     display: flex;
     gap: 14px;
+    flex-wrap: wrap;
 }
 
 .btn-principal,
@@ -110,6 +135,7 @@ h1 span {
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
+    transition: all 0.2s ease;
 }
 
 .btn-principal {
@@ -138,5 +164,12 @@ h1 span {
 
     h1 {
         font-size: 2.5rem;
+    }
+
+    .accueil::before {
+        width: 280px;
+        height: 280px;
+        right: -50px;
+        opacity: 0.08;
     }
 }
